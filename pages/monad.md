@@ -1,0 +1,8 @@
+---
+prerequisites:
+  - functor
+---
+
+# Monad
+
+todo

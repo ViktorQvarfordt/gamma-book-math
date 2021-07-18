@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+    - run: npm i https://api.gamma.one/cli/node-package/latest
+    - run: API_KEY=${{secrets.GAMMA_API_KEY}} npx gamma book upload .
