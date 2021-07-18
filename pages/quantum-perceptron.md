@@ -45,7 +45,8 @@ c_0 \begin{pmatrix} 1 \\ 0 \end{pmatrix} + c_1 \begin{pmatrix} 0 \\ 1 \end{pmatr
 $$
 <!--break-->
 where $c_0, c_1 \in \mathbb{C}$ and $|c_0|^2+|c_1|^2 = 1$. $|c_j|^2$ is the probability of a measurement outcome yielding the state $\vert j \rangle$.
-<!--break--> Because of the conditions on $c_j$ it follows from a topology argument that the pure states of a qubit are on the surface of a sphere.
+<!--break-->
+Because of the conditions on $c_j$ it follows from a topology argument that the pure states of a qubit are on the surface of a sphere.
 <!--break-->
 
 ### Bloch sphere
@@ -114,7 +115,7 @@ $$
 
 ## Quantum Perceptron
 
-We shall now describe a quantum algorithm for computing a the output of a classical perceptron.
+We shall now describe a quantum algorithm for computing the output of a classical perceptron.
 <img src="perceptron.png" style="max-width: 300px; display: block; margin: 0 auto;" />
 <!--break-->
 
