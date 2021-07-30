@@ -26,12 +26,10 @@ A Hausdorff space $X$ is a [topological space]() such that:
 
 :::definition[Second-countable space]
 A second-countable space is a [topological space]() $(X, \tau)$ such that:
-<negative-space />
 - There exists a countable basis for the topology $\tau$ on $X$.
 :::
 
 :::definition[Locally euclidean space]
 A locally euclidean space $X$ of dimension $n$ is a [topological space]() such that:
-<negative-space />
 - Each point of $X$ has a [neighborhood]() that is [homeomorphic](homeomorphism) to an open subset $\mathbb{R}^n$.
 :::

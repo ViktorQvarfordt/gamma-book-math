@@ -22,22 +22,20 @@ $$
 $$
 :::
 
-:::definition[Closure]
+::::definition[Closure]
 Let $*$ be a binary operation on $A$.
-<negative-space />
-- We say that $*$ is <em>closed</em> if $*(A) \subseteq A$.
-- Let $A' \subseteq A$. We say that $A'$ has <em>closure</em> under $*$, or that $*$ is <em>closed</em> on $A'$, if $*(A') \subseteq A'$.
+- We say that $*$ is _closed_ if $*(A) \subseteq A$.
+- Let $A' \subseteq A$. We say that $A'$ has _closure_ under $*$, or that $*$ is _closed_ on $A'$, if $*(A') \subseteq A'$.
 
-<intuition>
+:::intuition
 Subtraction (as a binary operation) on $\mathbb{Z}^+$ is not closed because there exists $a, b \in \mathbb{Z}^+$ such that $a - b \not\in \mathbb{Z}^+$ (for example $a = 0, b = 1$).
 
 Addition (as a binary operation) on $\mathbb{Z}^+$ is closed.
-</intuition>
 :::
+::::
 
 :::definition[Distributivity]
 Let $*$ and $\star$ be two binary operations on a set $A$, we say that $*$ is distributive over $\star$ if:
-<negative-space />
 - $\forall a, b, c \in A \, \big(a * (b \star c) = (a * b) \star (a * c)\big)$ (left distributive)
 - $\forall a, b, c \in A \, \big((b \star c) * a = (b * a) \star (c * a)\big)$ (right distributive)
 :::

@@ -14,11 +14,11 @@ If $I$ is an index set for the symbol $a$, then $a_i$ is defined for each $i \in
 ::::definition[Sequence]
 
 :::definition[Finite sequence]
-A <em>finite sequence</em> is a function defined on a finite index set $I$.
+A _finite sequence_ is a function defined on a finite index set $I$.
 :::
 
 :::definition[Infinite sequence]
-An <em>infinite sequence</em> is a function defined on an infinite index set $I$.
+An _infinite sequence_ is a function defined on an infinite index set $I$.
 :::
 
 :::definition[Notation]

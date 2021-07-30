@@ -10,7 +10,7 @@ A function $f(x)$ is a rule that gives some output $y = f(x)$ for each input $x$
 :::
 
 :::definition[Function (as a relation)]
-A function $f: X \to Y$ is a [binary relation $\mapsto$ on $X \times Y$ that is [right-unique and [left-total. We write $f(x) = y$ to denote $x \mapsto y$. The set $X$ is the _domain_ and $Y$ is the _codomain_.
+A function $f: X \to Y$ is a [binary relation]() $\mapsto$ on $X \times Y$ that is [right-unique]() and [left-total](). We write $f(x) = y$ to denote $x \mapsto y.$ The set $X$ is the _domain_ and $Y$ is the _codomain_.
 :::
 
 :::remark

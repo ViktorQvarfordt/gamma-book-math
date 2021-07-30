@@ -66,7 +66,7 @@ $$
 \varphi_2^{-1}(\xi) = (\varphi_2^{-1} \varphi_1) \varphi_1^{-1}(\xi).
 \end{aligned}
 $$
-From this, define the <strong>change of basis matrix</strong>
+From this, define the **change of basis matrix**
 $$
 \begin{aligned}
 P^{-1} = \varphi_2^{-1} \varphi_1,
