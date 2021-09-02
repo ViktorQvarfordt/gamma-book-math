@@ -98,6 +98,7 @@ structure: |-
     ac
     triangle-intruder-higher-dimension
     generate-garch-python
+    gpt3
   notation-and-terminology
 
 redirects:
