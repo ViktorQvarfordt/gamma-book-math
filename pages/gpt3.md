@@ -12,8 +12,6 @@ In this talk I will give an introduction to state of the art language models. We
 ----
 
 
-## Background
-
 - This will be a slightly different presentation
 - Overview of the core parts of the theory
 - Develop intuition by interacting with the model
@@ -34,9 +32,15 @@ Rather than purely focusing on theory, we will get hands-on experience to develo
 
 ## Why is this interesting?
 
+### Learning generalized across domains
+
 Language models are general AI models that can solve task in multiple domains without having to be re-trained. Building on the idea that language encodes most of what is interesting.
 
 This class of models can be seen as a significant step in the direction of AGI. The possible applications are vast and we are just getting started.
+
+### The blessings of scale
+
+The blessings of scale is the observation that for deep learning, hard problems are easier to solve than easy problems—everything gets better as it gets larger (in contrast to the usual outcome in research, where small things are hard and large things impossible).
 
 Neural-network based model continue to scale exceptionally well. This is somewhat surprising.
 
@@ -50,21 +54,20 @@ What is meta-learning? A model that has "learned how to learn".
 
 Without re-training the model on new data, the model can perform different tasks.
 
+We will see this throughout the examples.
 
 ## Definition of a language model
 
 A statistical language model is a probability distribution over sequences of words. Given such a sequence, say of length $m$, it assigns a probability $P(w_{1},\ldots ,w_{m})$ to the whole sequence.
 
-Typically, neural net language models are constructed and trained as probabilistic classifiers that learn to predict a probability distribution
-
 ### Training a language model
 
 A language model is trained by having it predict small parts of large amounts of unlabeled text.
 
-I.e., the network is trained to predict a probability distribution over the vocabulary, given some linguistic context.
+I.e., the model is trained to predict a probability distribution over the vocabulary, given some linguistic context,
 
 $$
-P(w_{t}\mid \mathrm {context} )\,\forall t\in V
+P(w_{t}\mid \mathrm {context} )\,\forall t\in V.
 $$
 
 This is done using standard neural net training algorithms such as stochastic gradient descent with backpropagation.​ The context might be a fixed-size window of previous words, so that the network predicts
@@ -87,8 +90,7 @@ In practice this gives the model a very robust context awareness.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/800px-ArtificialNeuronModel_english.png" style="max-width: 100%; padding: 1rem;" />
 
-
-$$
+<!-- $$
 \begin{aligned}
 {\frac {\partial E}{\partial w_{ij}}} &= {\frac {\partial E}{\partial o_{j}}}{\frac {\partial o_{j}}{\partial w_{ij}}}={\frac {\partial E}{\partial o_{j}}}{\frac {\partial o_{j}}{\partial {\text{net}}_{j}}}{\frac {\partial {\text{net}}_{j}}{\partial w_{ij}}} \\
 
@@ -101,6 +103,29 @@ $$
 {\frac {\partial E}{\partial o_{j}}} &= \sum _{\ell \in L}\left({\frac {\partial E}{\partial {\text{net}}_{\ell }}}{\frac {\partial {\text{net}}_{\ell }}{\partial o_{j}}}\right)=\sum _{\ell \in L}\left({\frac {\partial E}{\partial o_{\ell }}}{\frac {\partial o_{\ell }}{\partial {\text{net}}_{\ell }}}{\frac {\partial {\text{net}}_{\ell }}{\partial o_{j}}}\right)=\sum _{\ell \in L}\left({\frac {\partial E}{\partial o_{\ell }}}{\frac {\partial o_{\ell }}{\partial {\text{net}}_{\ell }}}w_{j\ell }\right)
 
 \end{aligned}
+$$ -->
+
+- Training data: Set of inputs ($x$) and expected target outputs ($t$): $(x, t)$
+- Error $E = \frac{1}{2}(t-y)^2$
+
+$$
+{\frac {\partial E}{\partial w_{ij}}} = {\frac {\partial E}{\partial o_{j}}}{\frac {\partial o_{j}}{\partial w_{ij}}}={\frac {\partial E}{\partial o_{j}}}{\frac {\partial o_{j}}{\partial {\text{net}}_{j}}}{\frac {\partial {\text{net}}_{j}}{\partial w_{ij}}}
+$$
+
+$$
+{\frac {\partial {\text{net}}_{j}}{\partial w_{ij}}} = {\frac {\partial }{\partial w_{ij}}}\left(\sum _{k=1}^{n}w_{kj}o_{k}\right)={\frac {\partial }{\partial w_{ij}}}w_{ij}o_{i}=o_{i}. \\
+$$
+
+$$
+{\frac {\partial o_{j}}{\partial {\text{net}}_{j}}} = {\frac {\partial }{\partial {\text{net}}_{j}}}\varphi ({\text{net}}_{j})=\varphi ({\text{net}}_{j})(1-\varphi ({\text{net}}_{j}))=o_{j}(1-o_{j})
+$$
+
+$$
+\frac{\partial E}{\partial o_j} = \frac{\partial E}{\partial y} = \frac{\partial}{\partial y} \frac{1}{2}(t - y)^2 = y - t
+$$
+
+$$
+{\frac {\partial E}{\partial o_{j}}} = \sum _{\ell \in L}\left({\frac {\partial E}{\partial {\text{net}}_{\ell }}}{\frac {\partial {\text{net}}_{\ell }}{\partial o_{j}}}\right)=\sum _{\ell \in L}\left({\frac {\partial E}{\partial o_{\ell }}}{\frac {\partial o_{\ell }}{\partial {\text{net}}_{\ell }}}{\frac {\partial {\text{net}}_{\ell }}{\partial o_{j}}}\right)=\sum _{\ell \in L}\left({\frac {\partial E}{\partial o_{\ell }}}{\frac {\partial o_{\ell }}{\partial {\text{net}}_{\ell }}}w_{j\ell }\right)
 $$
 
 ## GPT3
@@ -153,3 +178,5 @@ If a human had already written out what I wanted, what would the first few sente
 - How will this impact the future of how we do science and mathematics?
 - Currently the model is not good on math. Why is that? Small data set. Math has a somewhat different structure than natural language.
 - Can such systems become conscious? “I am open to the idea that a worm with 302 neurons is conscious, so I am open to the idea that GPT-3 with 175 billion parameters is conscious too.” — David Chalmers
+
+----
