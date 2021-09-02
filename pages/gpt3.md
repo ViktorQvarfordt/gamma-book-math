@@ -11,26 +11,32 @@ In this talk I will give an introduction to state of the art language models. We
 
 ----
 
+
+## Background
+
+- This will be a slightly different presentation
+- Overview of the core parts of the theory
+- Develop intuition by interacting with the model
+
+<!--
+I'm no longer actively working with mathematics or physics but programming and working closely with AI systems. The purpose of this session is to share with you the most impactful and interesting updates from the field.
+
+Rather than purely focusing on theory, we will get hands-on experience to develop some intuition and to spur further discussion and conversation in the intersection of mathematics, physics and perceptible spectra of reality.
+-->
+
 ## Agenda
 
-- Background
 - Definition of a language model
 - Meta learning and few shot learning
 - State of the art language models: GPT-3
 - Examples
 - Discussion
 
-
-## Background
-
-This will be a slightly different presentation. I'm no longer actively working with mathematics or physics but programming and working closely with AI systems. The purpose of this session is to share with you the most impactful and interesting updates from the field.
-
-Rather than purely focusing on theory, we will get hands-on experience to develop some intuition and to spur further discussion and conversation in the intersection of mathematics, physics and perceptible spectra of reality.
-
-
 ## Why is this interesting?
 
 Language models are general AI models that can solve task in multiple domains without having to be re-trained. Building on the idea that language encodes most of what is interesting.
+
+This class of models can be seen as a significant step in the direction of AGI. The possible applications are vast and we are just getting started.
 
 Neural-network based model continue to scale exceptionally well. This is somewhat surprising.
 
@@ -136,7 +142,8 @@ If a human had already written out what I wanted, what would the first few sente
 
 ## Examples
 
-https://beta.openai.com/examples
+- https://beta.openai.com/examples
+- https://openai.com/blog/openai-codex
 
 
 ## Discussion
