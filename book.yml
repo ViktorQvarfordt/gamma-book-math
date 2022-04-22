@@ -36,6 +36,8 @@ structure: |-
     neighborhood
     continuous-function
     homeomorphism
+  foundations
+    incompleteness
   analysis
     sequence
     metric
